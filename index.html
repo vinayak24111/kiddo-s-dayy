@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You 🎂</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1e1e2f, #3a3a5a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  animation: fade 1s ease;
+  padding: 20px;
+}
+
+img {
+  width: 220px;
+  border-radius: 15px;
+  margin-top: 20px;
+  animation: pop 0.6s ease;
+}
+
+button {
+  margin-top: 25px;
+  padding: 12px 25px;
+  border-radius: 25px;
+  border: none;
+  background: white;
+  color: #ff4d6d;
+  cursor: pointer;
+}
+
+@keyframes fade {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes pop {
+  from {transform: scale(0.7); opacity: 0;}
+  to {transform: scale(1); opacity: 1;}
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container" id="screen">
+  <h1>Heyyyyy kiddoooooo 🎂</h1>
+  <button onclick="next()">Tap here</button>
+</div>
+
+<script>
+let step = 0;
+
+function next() {
+  const s = document.getElementById("screen");
+
+  if (step === 0) {
+    s.innerHTML = "<h1>Happy Birthday :)</h1><button onclick='next()'>Next</button>";
+  }
+
+  else if (step === 1) {
+    s.innerHTML = `
+      <h1>Still remember this day...</h1>
+      <img src="img1.jpg">
+      <p>First date… you stealing my peace as usual</p>
+      <button onclick='next()'>Next</button>
+    `;
+  }
+
+  else if (step === 2) {
+    s.innerHTML = `
+      <h1>This one…</h1>
+      <img src="img2.jpg">
+      <p>Wearing my sweater like you owned it 😭</p>
+      <button onclick='next()'>Next</button>
+    `;
+  }
+
+  else if (step === 3) {
+    s.innerHTML = `
+      <h1>Diwali 2024 ✨</h1>
+      <img src="img3.jpg">
+      <p>You looked way too good that day, not fair</p>
+      <button onclick='next()'>Next</button>
+    `;
+  }
+
+  else if (step === 4) {
+    s.innerHTML = `
+      <h1>And this…</h1>
+      <img src="img4.jpg">
+      <p>Kiddo from the start 🥹</p>
+      <button onclick='next()'>Next</button>
+    `;
+  }
+
+  else if (step === 5) {
+    s.innerHTML = "<h1>We might not be what we were…</h1><button onclick='next()'>Next</button>";
+  }
+
+  else if (step === 6) {
+    s.innerHTML = "<h1>But what we had was real</h1><button onclick='next()'>Next</button>";
+  }
+
+  else if (step === 7) {
+    s.innerHTML = "<h1>And you’ll always have a place… just a quiet one now</h1><button onclick='next()'>Next</button>";
+  }
+
+  else if (step === 8) {
+    s.innerHTML = "<h1>Take care of yourself, okay?</h1><button onclick='next()'>Next</button>";
+  }
+
+  else if (step === 9) {
+    s.innerHTML = "<h1>Happy Birthday again 🎂🙂</h1>";
+  }
+
+  step++;
+}
+</script>
+
+</body>
+</html>
